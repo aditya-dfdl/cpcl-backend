@@ -57,12 +57,12 @@ const login = async (req, res) => {
 			return res.status(400).json({ message: 'Invalid Credientials!' });
 		}
 
-		const data = {
+		const userData = {
 			username: user.username,
 			role: user.role
 		};
 
-		res.status(200).json(data);
+		res.status(200).json(userData);
 	} catch (error) {
 		console.log('Error while logging: ', error);
 		res.status(500).json({ message: 'Error while logging' });
